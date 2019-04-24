@@ -29,6 +29,7 @@
     "@babel/register": "^7.4.0",
     "chai": "^4.2.0",
     "mocha": "^6.1.4",
-    "nodemon": "^1.18.11"
+    "nodemon": "^1.18.11",
+    "underscore": "^1.9.1"
   }
 }
