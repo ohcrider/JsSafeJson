@@ -20,6 +20,7 @@ function fetchLast(obj, strs) {
 }
 
 function fetchData(defaultValue, ...args) {
+  console.log(defaultValue);
   let rs = defaultValue;
   try {
     let { obj, strs } = handleArgs(...args);
