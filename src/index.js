@@ -32,7 +32,7 @@ function fetchData(defaultValue, ...args) {
 }
 
 export function fetchObject(...args) {
-  return fetchData(...args, defaultValue={});
+  return fetchData(defaultValue={}, ...args);
 }
 
 export function fetchBoolean(...args) {

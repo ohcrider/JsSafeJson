@@ -1,5 +1,4 @@
-import { expect } from 'chai';
-import assert from 'assert';
+import { expect, assert } from 'chai';
 
 import {
   fetchObject,
@@ -32,19 +31,11 @@ let jsonData = {
   e: '0'
 };
 
-describe('Array', function() {
-  describe('#indexOf()', function() {
-    it('should return -1 when the value is not present', function() {
-      assert.equal([1, 2, 3].indexOf(4), -1);
-    });
-  });
-});
-
-describe('index test', () => {
-  describe('sayHello function', () => {
-    it('should say Hello guys!', () => {
-      const str = sayHello();
-      expect(str).to.equal("Hello guys!")
+describe('fetchObject', () => {
+  describe('fetchObject function', () => {
+    it('should be object!', () => {
+      const obj = fetchObject(jsonData, 'b');
+      assert.typeOf(obj, 'object');
     })
   })
 })
