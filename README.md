@@ -1,3 +1,6 @@
+### about
+handle json data with safe & easy way
+
 ### install
 ```
 npm install js-safe-json
@@ -62,7 +65,7 @@ let array = fetchNumber(jsonData, 'a');
 ```
 
 ### License
-Copyright (C) 2015 fewspider
+Copyright (C) 2019 fewspider
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
