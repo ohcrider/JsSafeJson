@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/fewspider/JsSafeJson/issues"
   },
-  "homepage": "https://github.com/fewspider/JsSafeJson#readme"
+  "homepage": "https://github.com/fewspider/JsSafeJson#readme",
+  "devDependencies": {
+    "mocha": "^6.1.4"
+  }
 }
