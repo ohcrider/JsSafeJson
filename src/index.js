@@ -19,7 +19,7 @@ function fetchLast(obj, strs) {
   return fetchLast(tempObj, tempStrs);
 }
 
-function fetchData(...args, defaultValue) {
+function fetchData(defaultValue, ...args) {
   let rs = defaultValue;
   try {
     let { obj, strs } = handleArgs(...args);
@@ -36,17 +36,17 @@ export function fetchObject(...args) {
 }
 
 export function fetchBoolean(...args) {
-  return fetchData(...args, defaultValue=false);
+  return fetchData(defaultValue=false, ...args);
 }
 
 export function fetchString(...args) {
-  return fetchData(...args, defaultValue='');
+  return fetchData(defaultValue='', ...args);
 }
 
 export function fetchNumber(...args) {
-  return fetchData(...args, defaultValue=0);
+  return fetchData(defaultValue=0, ...args);
 }
 
 export function fetchArray(...args) {
-  return fetchData(...args, defaultValue=[]);
+  return fetchData(defaultValue=[], ...args);
 }

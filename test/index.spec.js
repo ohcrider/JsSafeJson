@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { assert } from 'assert';
+import assert from 'assert';
 
 import {
   fetchObject,
@@ -31,7 +31,6 @@ let jsonData = {
   d: null,
   e: '0'
 };
-
 
 describe('Array', function() {
   describe('#indexOf()', function() {
