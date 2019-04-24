@@ -1,3 +1,8 @@
+### install
+```
+npm install js-safe-json
+```
+
 ### dev
 ```
 npm run start
@@ -15,7 +20,7 @@ import {
   fetchBoolean,
   fetchString,
   fetchNumber,
-  fetchArray } from 'js-safej-son';
+  fetchArray } from 'js-safe-json';
 
 // your json data
 let jsonData = {
