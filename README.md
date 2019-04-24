@@ -61,7 +61,7 @@ let object = fetchObject(jsonData, 'b');
 let boolean = fetchBoolean(jsonData, 'b');
 let string = fetchString(jsonData, 'e');
 let number = fetchNumber(jsonData, 'b', 'b1');
-let array = fetchNumber(jsonData, 'a');
+let array = fetchArray(jsonData, 'a');
 ```
 
 ### License
