@@ -1,3 +1,6 @@
+import { expect } from 'chai';
+import { assert } from 'assert';
+
 import {
   fetchObject,
   fetchBoolean,
@@ -29,7 +32,7 @@ let jsonData = {
   e: '0'
 };
 
-var assert = require('assert');
+
 describe('Array', function() {
   describe('#indexOf()', function() {
     it('should return -1 when the value is not present', function() {
@@ -37,3 +40,12 @@ describe('Array', function() {
     });
   });
 });
+
+describe('index test', () => {
+  describe('sayHello function', () => {
+    it('should say Hello guys!', () => {
+      const str = sayHello();
+      expect(str).to.equal("Hello guys!")
+    })
+  })
+})

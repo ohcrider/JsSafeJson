@@ -4,7 +4,8 @@
   "description": "handle json data with safe & easy way",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "start": "nodemon --exec babel-node ./src/index.js",
+    "test": "mocha --compilers js:@babel/register"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,13 @@
   },
   "homepage": "https://github.com/fewspider/JsSafeJson#readme",
   "devDependencies": {
-    "mocha": "^6.1.4"
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/register": "^7.4.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.18.11"
   }
 }
