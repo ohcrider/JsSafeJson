@@ -28,7 +28,8 @@ let jsonData = {
   },
   c: 233,
   d: null,
-  e: '0'
+  e: '233',
+  f: 'fffff',
 };
 
 describe('fetchObject', () => {
