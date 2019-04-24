@@ -1,0 +1,22 @@
+{
+  "name": "jssafejson",
+  "version": "1.0.0",
+  "description": "handle json data with safe & easy way",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fewspider/JsSafeJson.git"
+  },
+  "keywords": [
+    "json"
+  ],
+  "author": "fewspider",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fewspider/JsSafeJson/issues"
+  },
+  "homepage": "https://github.com/fewspider/JsSafeJson#readme"
+}
