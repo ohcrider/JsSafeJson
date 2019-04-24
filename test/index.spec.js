@@ -30,6 +30,8 @@ let jsonData = {
   d: null,
   e: '233',
   f: 'fffff',
+  g: true,
+  h: false
 };
 
 describe('fetchObject', () => {
@@ -47,6 +49,16 @@ describe('fetchObject', () => {
     let test = fetchObject(jsonData, 'd');
     expect(test).to.eql({});
   });
+
+  it('should be equal!', () => {
+    let test = fetchObject(jsonData, 'b');
+    expect(test).to.eql({
+      b1: 12,
+      b2: 12.0,
+      b3: 12.01,
+      b4: 12.001
+    });
+  });
 });
 
 describe('fetchBoolean', () => {
@@ -62,6 +74,16 @@ describe('fetchBoolean', () => {
 
   it('should be equal!', () => {
     let test = fetchBoolean(jsonData, 'd');
+    expect(test).to.eql(false);
+  });
+
+  it('should be equal!', () => {
+    let test = fetchBoolean(jsonData, 'g');
+    expect(test).to.eql(true);
+  });
+
+  it('should be equal!', () => {
+    let test = fetchBoolean(jsonData, 'h');
     expect(test).to.eql(false);
   });
 });
@@ -81,6 +103,11 @@ describe('fetchString', () => {
     let test = fetchString(jsonData, 'd');
     expect(test).to.eql('');
   });
+
+  it('should be equal!', () => {
+    let test = fetchString(jsonData, 'e');
+    expect(test).to.eql('233');
+  });
 });
 
 describe('fetchNumber', () => {
@@ -88,6 +115,7 @@ describe('fetchNumber', () => {
     let obj = fetchNumber(jsonData, 'b');
     assert.typeOf(obj, 'number');
   });
+
   it('should be number!', () => {
     let test = fetchNumber(jsonData, 'd');
     assert.typeOf(test, 'number');
@@ -96,6 +124,11 @@ describe('fetchNumber', () => {
   it('should be equal!', () => {
     let test = fetchNumber(jsonData, 'd');
     expect(test).to.eql(0);
+  });
+
+  it('should be equal!', () => {
+    let test = fetchNumber(jsonData, 'b', 'b3');
+    expect(test).to.eql(12.01);
   });
 });
 
