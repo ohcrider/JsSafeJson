@@ -41,7 +41,7 @@ function fetchData(defaultValue, ...rest) {
       rs = defaultValue;
     }
   } catch (e) {
-    console.log(e);
+    // console.log(e);
     rs = defaultValue;
   } finally {
     return rs;

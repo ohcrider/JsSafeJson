@@ -1,6 +1,6 @@
 {
   "name": "js-safe-json",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "handle json data with safe & easy way",
   "main": "src/index.js",
   "scripts": {
