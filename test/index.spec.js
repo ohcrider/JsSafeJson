@@ -130,6 +130,11 @@ describe('fetchNumber', () => {
     let test = fetchNumber(jsonData, 'b', 'b3');
     expect(test).to.eql(12.01);
   });
+
+  it('should be equal!', () => {
+    let test = fetchNumber(jsonData, 'e');
+    expect(test).to.eql(233);
+  });
 });
 
 describe('fetchArray', () => {

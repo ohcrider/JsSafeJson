@@ -26,6 +26,11 @@ function fetchData(defaultValue, ...rest) {
   try {
     let { obj, strs } = handleRest(...rest);
     let tempRs = fetchLast(obj, strs);
+
+    if (_.isNumber(defaultValue) && _.isString(tempRs)) {
+      tempRs = Number(tempRs);
+    }
+
     rs = tempRs? tempRs: defaultValue;
 
     if (typeof rs !== typeof defaultValue) {
