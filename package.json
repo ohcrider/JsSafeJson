@@ -1,8 +1,8 @@
 {
   "name": "js-safe-json",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "handle json data with safe & easy way",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "nodemon --exec babel-node ./src/index.js",
     "test": "mocha --require @babel/register"
