@@ -1,6 +1,6 @@
 {
   "name": "js-safe-json",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "handle json data with safe & easy way",
   "main": "dist/index.min.js",
   "scripts": {
@@ -28,6 +28,7 @@
     "@babel/core": "^7.4.3",
     "@babel/node": "^7.2.2",
     "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+    "@babel/plugin-transform-typeof-symbol": "^7.14.5",
     "@babel/preset-env": "^7.4.3",
     "@babel/register": "^7.4.0",
     "chai": "^4.2.0",
