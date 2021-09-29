@@ -17,12 +17,15 @@
   "keywords": [
     "json"
   ],
-  "author": "fewspider",
+  "author": "ohcrider",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fewspider/JsSafeJson/issues"
+    "url": "https://github.com/ohcrider/JsSafeJson/issues"
   },
-  "homepage": "https://github.com/fewspider/JsSafeJson#readme",
+  "homepage": "https://github.com/ohcrider/JsSafeJson#readme",
+  "dependencies": {
+    "underscore": "^1.13.1"
+  },
   "devDependencies": {
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
@@ -33,7 +36,6 @@
     "chai": "^4.2.0",
     "mocha": "^6.1.4",
     "nodemon": "^1.18.11",
-    "uglify-js": "^3.5.8",
-    "underscore": "^1.9.1"
+    "uglify-js": "^3.5.8"
   }
 }
