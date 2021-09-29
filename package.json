@@ -1,6 +1,6 @@
 {
   "name": "js-safe-json",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "handle json data with safe & easy way",
   "main": "dist/index.min.js",
   "scripts": {
@@ -23,9 +23,6 @@
     "url": "https://github.com/ohcrider/JsSafeJson/issues"
   },
   "homepage": "https://github.com/ohcrider/JsSafeJson#readme",
-  "dependencies": {
-    "underscore": "^1.13.1"
-  },
   "devDependencies": {
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",

@@ -1,15 +1,29 @@
-import * as _ from 'underscore';
+function clone(obj) {
+  return JSON.parse(JSON.stringify(obj));
+}
+
+function isNumber(obj) {
+  return typeof obj === 'number';
+}
+
+function isString(obj) {
+  return typeof obj === 'string';
+}
+
+function isArray(obj) {
+  return obj.constructor === Array;
+}
 
 function handleRest(...rest) {
   let obj = rest? rest[0]: {};
-  let strs = _.clone(rest);
+  let strs = clone(rest);
   strs.shift();
 
   return { obj, strs };
 }
 
 function fetchLast(obj, strs) {
-  let tempStrs = _.clone(strs);
+  let tempStrs = clone(strs);
   let tempStr = strs[0];
   let tempObj = obj[tempStr];
 
@@ -27,7 +41,7 @@ function fetchData(defaultValue, ...rest) {
     let { obj, strs } = handleRest(...rest);
     let tempRs = fetchLast(obj, strs);
 
-    if (_.isNumber(defaultValue) && _.isString(tempRs)) {
+    if (isNumber(defaultValue) && isString(tempRs)) {
       tempRs = Number(tempRs);
     }
 
@@ -45,7 +59,7 @@ function fetchData(defaultValue, ...rest) {
       rs = defaultValue;
     }
 
-    if (_.isArray(defaultValue) && !_.isArray(rs)) {
+    if (isArray(defaultValue) && !isArray(rs)) {
       rs = defaultValue;
     }
   } catch (e) {

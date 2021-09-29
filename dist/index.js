@@ -9,13 +9,23 @@ exports.fetchString = fetchString;
 exports.fetchNumber = fetchNumber;
 exports.fetchArray = fetchArray;
 
-var _ = _interopRequireWildcard(require("underscore"));
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function clone(obj) {
+  return JSON.parse(JSON.stringify(obj));
+}
+
+function isNumber(obj) {
+  return typeof obj === 'number';
+}
+
+function isString(obj) {
+  return typeof obj === 'string';
+}
+
+function isArray(obj) {
+  return obj.constructor === Array;
+}
 
 function handleRest() {
   for (var _len = arguments.length, rest = new Array(_len), _key = 0; _key < _len; _key++) {
@@ -23,9 +33,7 @@ function handleRest() {
   }
 
   var obj = rest ? rest[0] : {};
-
-  var strs = _.clone(rest);
-
+  var strs = clone(rest);
   strs.shift();
   return {
     obj: obj,
@@ -34,8 +42,7 @@ function handleRest() {
 }
 
 function fetchLast(obj, strs) {
-  var tempStrs = _.clone(strs);
-
+  var tempStrs = clone(strs);
   var tempStr = strs[0];
   var tempObj = obj[tempStr];
 
@@ -61,7 +68,7 @@ function fetchData(defaultValue) {
 
     var tempRs = fetchLast(obj, strs);
 
-    if (_.isNumber(defaultValue) && _.isString(tempRs)) {
+    if (isNumber(defaultValue) && isString(tempRs)) {
       tempRs = Number(tempRs);
     }
 
@@ -79,7 +86,7 @@ function fetchData(defaultValue) {
       rs = defaultValue;
     }
 
-    if (_.isArray(defaultValue) && !_.isArray(rs)) {
+    if (isArray(defaultValue) && !isArray(rs)) {
       rs = defaultValue;
     }
   } catch (e) {
