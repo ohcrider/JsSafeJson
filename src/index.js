@@ -9,9 +9,9 @@ function handleRest(...rest) {
 }
 
 function fetchLast(obj, strs) {
-  var tempStrs = _.clone(strs);
-  var tempStr = strs[0];
-  var tempObj = obj[tempStr];
+  let tempStrs = _.clone(strs);
+  let tempStr = strs[0];
+  let tempObj = obj[tempStr];
 
   if (tempStrs.length === 1) {
     return tempObj;
