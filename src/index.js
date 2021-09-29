@@ -5,7 +5,7 @@ function handleRest(...rest) {
   let strs = _.clone(rest);
   strs.shift();
 
-  return {obj, strs};
+  return { obj, strs };
 }
 
 function fetchLast(obj, strs) {
