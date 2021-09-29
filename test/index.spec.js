@@ -108,6 +108,21 @@ describe('fetchString', () => {
     let test = fetchString(jsonData, 'e');
     expect(test).to.eql('233');
   });
+
+  it('should be equal!', () => {
+    let test = fetchString(jsonData, 'c');
+    expect(test).to.eql('233');
+  });
+
+  it('should be equal!', () => {
+    let test = fetchString(jsonData, 'b');
+    expect(test).to.eql('{"b1":12,"b2":12,"b3":12.01,"b4":12.001}');
+  });
+
+  it('should be equal!', () => {
+    let test = fetchString(jsonData, 'a', '1', 'a1');
+    expect(test).to.eql('[1,2,3,4]');
+  });
 });
 
 describe('fetchNumber', () => {

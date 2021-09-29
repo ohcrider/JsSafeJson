@@ -33,6 +33,14 @@ function fetchData(defaultValue, ...rest) {
 
     rs = tempRs? tempRs: defaultValue;
 
+    if (typeof defaultValue === 'string') {
+      if (typeof rs === 'object') {
+        rs = JSON.stringify(rs);
+      } else {
+        rs = `${rs}`;
+      }
+    }
+
     if (typeof rs !== typeof defaultValue) {
       rs = defaultValue;
     }
