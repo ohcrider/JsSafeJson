@@ -3,6 +3,14 @@
 ### about
 handle json data with safe & easy way
 
+### why
+Modern web frameworks, such as React and Vue, mostly render based on JSON data.
+
+Ideally, as long as the back-end and front-end render web pages according to the agreed JSON data type, there will be no errors.
+However, in the real world, in the agile and rapid development mode, or because of later business adjustments or personnel changes, some data types change, and new risks are introduced at this time, such as a white screen and a webpage crash. At this time, if you spend a lot of time and energy to troubleshoot this type of error, it will not be conducive to business adjustment and bug follow-up.
+
+It is better to deal with it from the beginning, so as to avoid the problem that the web page crashes and cannot be rendered due to the change of the JSON data type.
+
 ### install
 ```
 npm install js-safe-json
