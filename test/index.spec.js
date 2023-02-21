@@ -5,7 +5,21 @@ import {
   fetchBoolean,
   fetchString,
   fetchNumber,
-  fetchArray } from '../src/index.min.js';
+  fetchArray } from '../src/index';
+
+// import {
+//   fetchObject,
+//   fetchBoolean,
+//   fetchString,
+//   fetchNumber,
+//   fetchArray } from '../dist/index.js';
+
+// import {
+//   fetchObject,
+//   fetchBoolean,
+//   fetchString,
+//   fetchNumber,
+//   fetchArray } from '../src/index.min.js';
 
 const jsonData = {
   a: [
