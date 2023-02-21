@@ -15,17 +15,21 @@ function isArray(obj) {
 }
 
 function handleRest(...rest) {
-  let obj = rest? rest[0]: {};
-  let strs = clone(rest);
+  const obj = rest? rest[0]: {};
+  const strs = clone(rest);
   strs.shift();
 
   return { obj, strs };
 }
 
 function fetchLast(obj, strs) {
-  let tempStrs = clone(strs);
-  let tempStr = strs[0];
-  let tempObj = obj[tempStr];
+  if (strs.length === 0) {
+    return obj;
+  }
+
+  const tempStrs = clone(strs);
+  const tempStr = strs[0];
+  const tempObj = obj[tempStr];
 
   if (tempStrs.length === 1) {
     return tempObj;
@@ -38,7 +42,7 @@ function fetchLast(obj, strs) {
 function fetchData(defaultValue, ...rest) {
   let rs = defaultValue;
   try {
-    let { obj, strs } = handleRest(...rest);
+    const { obj, strs } = handleRest(...rest);
     let tempRs = fetchLast(obj, strs);
 
     if (isNumber(defaultValue) && isString(tempRs)) {
@@ -63,7 +67,7 @@ function fetchData(defaultValue, ...rest) {
       rs = defaultValue;
     }
   } catch (e) {
-    // console.log(e);
+    console.log(e);
     rs = defaultValue;
   } finally {
     return rs;
