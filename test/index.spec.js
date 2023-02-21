@@ -5,7 +5,7 @@ import {
   fetchBoolean,
   fetchString,
   fetchNumber,
-  fetchArray } from '../src/index';
+  fetchArray } from '../src/index.min.js';
 
 const jsonData = {
   a: [

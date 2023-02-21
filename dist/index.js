@@ -42,6 +42,10 @@ function handleRest() {
 }
 
 function fetchLast(obj, strs) {
+  if (strs.length === 0) {
+    return obj;
+  }
+
   var tempStrs = clone(strs);
   var tempStr = strs[0];
   var tempObj = obj[tempStr];
