@@ -34,6 +34,10 @@ let jsonData = {
   h: false
 };
 
+let test = fetchBoolean(jsonData, 'c');
+console.log(test);
+
+
 describe('fetchObject', () => {
   it('should be object!', () => {
     let test = fetchObject(jsonData, 'c');

@@ -1,24 +1,24 @@
 [English](./README.md)|[中文简体](./README.zh-CN.md)
 
-### about
-handle json data with safe & easy way
+### 关于
+可以更加安全、简单地处理JSON数据
 
-### install
+### 安装
 ```
 npm install js-safe-json
 ```
 
-### dev
+### 本地开发
 ```
 npm run start
 ```
 
-### run test
+### 测试脚本
 ```
 npm run test
 ```
 
-### usage
+### 使用方法
 ```
 import {
   fetchObject,
@@ -27,7 +27,7 @@ import {
   fetchNumber,
   fetchArray } from 'js-safe-json';
 
-// your json data
+// 需要处理的JSON数据
 let jsonData = {
   a: [
     {
@@ -52,12 +52,12 @@ let jsonData = {
   e: '0'
 };
 
-// it is safe,if data not expect value,it will return default value
-// object  default value: {}
-// boolean default value: false
-// string  default value: ''
-// number  default value: 0
-// array   default value: []
+// 类型安全，如果获取不到预期的值，它会返回默认值
+// object  默认值: {}
+// boolean 默认值: false
+// string  默认值: ''
+// number  默认值: 0
+// array   默认值: []
 
 let object = fetchObject(jsonData, 'b');
 let boolean = fetchBoolean(jsonData, 'b');
